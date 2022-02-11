@@ -13,6 +13,8 @@ export class UserRouter {
     this.router.post("", new UserController().createUser);
     this.router.get("", new UserController().getUsers);
     this.router.get("/:id", new UserController().getUser);
+    this.router.put("/:id", new UserController().updateUser);
+    this.router.delete("/:id", new UserController().deleteUser);
   }
 
   get routes() {
